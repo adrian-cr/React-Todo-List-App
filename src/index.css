@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.TodoApp {
+  font-family: Arial, Helvetica, sans-serif;
+  * {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* HEADER */
+header {
+  background-color: #f7a90e;
+  height: 10vh;
+  * {
+    margin: 0;
+  }
+  h1 {
+    color: #fff;
+  }
+}
+
+/* TodoApp */
+main {
+  -ms-overflow-style: none;
+  align-content: flex-start;
+  align-items: start;
+  background-image: url("../public/images/background.jpg");
+  background-size: contain;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  height: 90vh;
+  padding: 5%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/* Task & TaskInput */
+.el-container {
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 8vh;
+  margin-bottom: 15px;
+  overflow: hidden;
+  padding: 0 15px;
+  width: 60%;
+  &:has(.task-title:hover) {
+    background-color: #c1edff;
+  }
+}
+
+.el-body {
+  -ms-overflow-style: none;
+  justify-content: start;
+  font-size: calc(1vw + 2vh);
+  height: 100%;
+  overflow-x: scroll;
+  padding: 10px;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: calc(100%);
+}
+
+/* Task */
+.task-button {
+  background-color: #ffffff00;
+  border: none;
+  height: 100%;
+  width: 30px;
+  img {
+    width: 30px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.task-body:hover {
+    color: gray;
+    cursor: text;
+    transition: 200ms;
+  }
+.completed {
+  background-color: #d9ffe0ae;
+  .task-body {
+    text-decoration: line-through;
+    color:rgba(106, 166, 175, 0.747);
+    &:hover {
+      color:rgb(106, 166, 175, 0.747);
+      cursor: default;
+    }
+  }
+}
+
+
+/* TaskInput */
+.input-container {
+  background-color: #d6f2fdea;
+  * {
+    background-color: #c1ffec00;
+  }
+}
+.input-body {
+  border: none;
+  box-sizing: border-box;
+  color: rgb(50, 39, 70);
+  height: 8vh;
+  justify-content: center;
+  outline: none;
+}
+.main-input {
+  background-color: #ffffffcf;
+  .add-field {
+    width: 100%;
+    padding: 10px;
+  }
+}
